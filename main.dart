@@ -8,9 +8,10 @@ class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
 
-@override
 Widget retornarContainer(String caminho){
-    return Padding(
+    return Stack(
+      children: [
+    Padding(
       padding: EdgeInsets.all(16.0),
       child:  Container(
     width: 100.0, height: 100.0,
@@ -21,9 +22,10 @@ Widget retornarContainer(String caminho){
     border: Border.all(color: Colors.cyan, width: 1)
     ),
   ),
-     
+    ),
+    Positioned(right: 10, bottom: 10, child: Icon(Icons.star, color: Colors.amberAccent, weight: 100.0))
+      ]
     );
-    
 }
 
 
@@ -74,3 +76,4 @@ Widget retornarContainer(String caminho){
     );
   }
 }
+
